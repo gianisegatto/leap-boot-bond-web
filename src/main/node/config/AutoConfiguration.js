@@ -15,7 +15,12 @@ class AutoConfiguration {
         const appBuilder = new AppBuilder(express());
         routers.forEach(router => appBuilder.addRouter(router.getInstance()));
 
-        return appBuilder.build();
+        const app = appBuilder.build();
+
+        const appComponent = new Component("app", "leap-web/App", AppBuilder, []);
+        mySqlDataSourceComponent.setInstance(app);
+
+        return appComponent;
     }
 }
 
