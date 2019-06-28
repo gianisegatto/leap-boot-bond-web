@@ -6,6 +6,9 @@ const ROUTER = "router";
 class AutoConfiguration {
     
     static preLoad(environment) {
+        const routerComponent = new Component("router", "leap-web/App", null, []);
+        routerComponent.setInstance(express.Router());
+        return routerComponent;
     }
 
     static postLoad(components) {
@@ -18,7 +21,7 @@ class AutoConfiguration {
         const app = appBuilder.build();
 
         const appComponent = new Component("app", "leap-web/App", AppBuilder, []);
-        mySqlDataSourceComponent.setInstance(app);
+        appComponent.setInstance(app);
 
         return appComponent;
     }
