@@ -38,12 +38,7 @@ class LeapWebApplication {
         const appBuilder = new AppBuilder(express());
         routers.forEach(router => appBuilder.addRouter(router.getInstance().build()));
 
-        const app = appBuilder.build();
-
-        const appComponent = new Component("app", "leap-web/App", AppBuilder, []);
-        appComponent.setInstance(app);
-
-        return appComponent;
+        return appBuilder.build();
     }
 
     static getServerPort(environment) {
