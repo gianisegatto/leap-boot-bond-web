@@ -63,4 +63,4 @@ class LeapWebApplication {
     }
 }
 
-module.exports = AutoConfiguration;
+module.exports = LeapWebApplication;
