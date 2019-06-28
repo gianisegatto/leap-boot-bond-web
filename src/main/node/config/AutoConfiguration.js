@@ -13,7 +13,7 @@ class AutoConfiguration {
         const routers = components.filter(component => component.name.lowerCase.includes(ROUTER));
 
         const appBuilder = new AppBuilder(express());
-        routers.forEach(router => appBuilder.addRouter(router));
+        routers.forEach(router => appBuilder.addRouter(router.getInstance()));
 
         return appBuilder.build();
     }
