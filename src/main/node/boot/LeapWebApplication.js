@@ -17,8 +17,8 @@ class LeapWebApplication {
 
         const environment = new EnvironmentLoader().load();
 
-        const serverPort = getServerPort(environment);
-        const applicationName = this.getApplicationName(environment);
+        const serverPort = LeapWebApplication.getServerPort(environment);
+        const applicationName = LeapWebApplication.getApplicationName(environment);
 
         app.listen(serverPort, () => {
             console.info(applicationName + " running on port: " + serverPort);
