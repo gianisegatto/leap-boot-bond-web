@@ -1,7 +1,7 @@
 "use strict";
 
-const AutoConfiguration = require("./config/AutoConfiguration");
+const LeapWebApplication = require("./boot/LeapWebApplication");
 
 exports = module.exports;
 
-exports.AutoConfiguration = AutoConfiguration;
+exports.LeapWebApplication = LeapWebApplication;

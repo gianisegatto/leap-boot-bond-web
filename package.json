@@ -1,8 +1,8 @@
 {
-  "name": "leap-boot-bond-web",
+  "name": "leap-boot-web",
   "version": "0.0.1",
   "description": "I'm here to help you dealing with mysql using a promise way",
-  "homepage": "https://github.com/gianisegatto/leap-boot-bond-web",
+  "homepage": "https://github.com/gianisegatto/leap-boot-web",
   "license": "UNLICENSED",
   "files": [
     "src/",
@@ -11,10 +11,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gianisegatto/leap-boot-bond-web"
+    "url": "https://github.com/gianisegatto/leap-boot-web"
   },
   "dependencies": {
     "leap-core": "github:gianisegatto/leap-core#master",
+    "leap-boot": "github:gianisegatto/leap-boot#master",
     "leap-web": "github:gianisegatto/leap-web#master"
   },
   "devDependencies": {
