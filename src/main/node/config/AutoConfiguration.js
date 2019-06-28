@@ -1,10 +1,10 @@
 const express = require("express");
 const Component = require("leap-core").Component;
-const MySqlDatasourceFactory = require("leap-web").AppBuilder;
+const AppBuilder = require("leap-web").AppBuilder;
 
-const ROUTER = "router";
+const ROUTER = "routerbuilder";
 class AutoConfiguration {
-    
+
     static preLoad(environment) {
         const routerComponent = new Component("router", "leap-web/App", null, []);
         routerComponent.setInstance(express.Router());
@@ -13,10 +13,10 @@ class AutoConfiguration {
 
     static postLoad(components) {
 
-        const routers = components.filter(component => component.name.lowerCase.includes(ROUTER));
+        const routers = components.filter(component => component.name.toLowerCase().includes(ROUTER));
 
         const appBuilder = new AppBuilder(express());
-        routers.forEach(router => appBuilder.addRouter(router.getInstance()));
+        routers.forEach(router => appBuilder.addRouter(router.getInstance().build()));
 
         const app = appBuilder.build();
 
