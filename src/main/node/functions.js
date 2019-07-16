@@ -1,6 +1,6 @@
 "use strict";
 
-const LeapWebApplication = require("./boot/LeapWebApplication");
+const LeapWebApplication = require("./runner/LeapWebApplication");
 
 exports = module.exports;
 
