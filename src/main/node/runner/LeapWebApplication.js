@@ -2,7 +2,7 @@ const express = require("express");
 const RouterCreator = require("./creator/RouterCreator");
 const AppCreator = require("./creator/AppCreator");
 const EnvironmentResolver = require("./resolver/EnvironmentResolver");
-const LeapApplication = require("leap-boot").LeapApplication;
+const LeapApplication = require("leap-runner").LeapApplication;
 const EnvironmentLoader = require("leap-core").EnvironmentLoader;
 
 class LeapWebApplication {
