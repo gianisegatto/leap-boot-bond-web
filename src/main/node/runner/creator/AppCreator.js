@@ -8,7 +8,7 @@ class AppCreator {
 
         const routers = components.filter(component => component.name.toLowerCase().includes(ROUTER));
 
-        const appBuilder = new AppCreator(express());
+        const appBuilder = new AppBuilder(express());
         routers.forEach(router => appBuilder.addRouter(router.getInstance().build()));
 
         return appBuilder.build();
