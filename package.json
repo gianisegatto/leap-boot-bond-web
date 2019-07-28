@@ -1,8 +1,8 @@
 {
-  "name": "leap-runner-web",
+  "name": "leap-runner-web-express",
   "version": "0.0.1",
   "description": "I'm here to help you dealing with mysql using a promise way",
-  "homepage": "https://github.com/gianisegatto/leap-runner-web",
+  "homepage": "https://github.com/gianisegatto/leap-runner-web-express",
   "license": "UNLICENSED",
   "files": [
     "src/",
@@ -11,12 +11,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gianisegatto/leap-runner-web"
+    "url": "https://github.com/gianisegatto/leap-runner-web-express"
   },
   "dependencies": {
     "leap-core": "github:gianisegatto/leap-core#master",
     "leap-runner": "github:gianisegatto/leap-runner#master",
-    "leap-web": "github:gianisegatto/leap-web#master"
+    "leap-web-express": "github:gianisegatto/leap-web-express#master"
   },
   "devDependencies": {
     "chai": "^4.1.2",
