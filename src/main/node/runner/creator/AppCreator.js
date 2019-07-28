@@ -1,4 +1,4 @@
-const AppBuilder = require("leap-web").AppBuilder;
+const AppBuilder = require("leap-web-express").AppBuilder;
 
 const ROUTER = "routerbuilder";
 
