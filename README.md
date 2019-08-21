@@ -66,13 +66,15 @@ class CreateRouterBuilder {
 module.exports = CreateRouterBuilder;
 ```
 
-#### Explanation
-As you can see your RouterBuilder should at least expect the express router as constructor parameter and should always have a method called build building the route to the operation you want to execute.
+### Explanation
+Explanation
+As you can see your RouterBuilder should at least expect the express router as a constructor parameter and should always have a method called build building the route to the operation you want to execute.
 
-On this example we want to create something calling the createService, so it's expecting as constructor parameter the createService as well.
+On this example, we want to create something calling the createService, so it's expecting as constructor parameter the createService as well.
 
-Behind the scenes leap-runner-web-express will execute leap-runner, which will execute leap-context in order to create all of your dependencies and inject it. After that it will find every RouterBuilder instance, call the method build, create an Express app and add the router from the build method into the app.
-Something like this:
+Behind the scenes, leap-runner-web-express will execute leap-runner, which will execute leap-context in order to create all of your dependencies and inject it. After that, it will find every RouterBuilder instance, call the method to build, create an Express app and add the router from the build method into the app. 
+
+### Something like this:
 ```js
     const express = require("express");
     const router = express.Router();
